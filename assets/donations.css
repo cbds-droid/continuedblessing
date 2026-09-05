@@ -1,0 +1,240 @@
+.donation-dialog[hidden] {
+  display: none;
+}
+
+.donation-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  color: #1a1a1a;
+}
+
+.donation-dialog__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 29, 29, 0.76);
+  backdrop-filter: blur(5px);
+}
+
+.donation-dialog__panel {
+  position: relative;
+  width: min(100%, 34rem);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  border: 1px solid rgba(201, 168, 76, 0.45);
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  background: #faf8f5;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+}
+
+.donation-dialog__close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #555;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.donation-dialog__eyebrow {
+  margin: 0 0 0.65rem;
+  color: #947328;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.donation-dialog h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.donation-dialog__intro {
+  margin: 0.8rem 0 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.donation-form,
+.donation-form label {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.donation-form {
+  gap: 1.15rem;
+}
+
+.donation-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.donation-form legend,
+.donation-form label > span:first-child {
+  margin-bottom: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.donation-form em {
+  color: #777;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.donation-form__presets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+.donation-form__presets button {
+  min-height: 3rem;
+  border: 1px solid #d8d1c3;
+  border-radius: 0.7rem;
+  background: #fff;
+  color: #2c6b6b;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.donation-form__presets button[aria-pressed='true'] {
+  border-color: #2c6b6b;
+  background: #2c6b6b;
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(44, 107, 107, 0.14);
+}
+
+.donation-form input {
+  width: 100%;
+  min-height: 3.15rem;
+  border: 1px solid #cfc8bb;
+  border-radius: 0.7rem;
+  padding: 0.75rem 0.9rem;
+  background: #fff;
+  color: #1a1a1a;
+  font: inherit;
+}
+
+.donation-form input:focus,
+.donation-dialog button:focus-visible {
+  outline: 3px solid rgba(201, 168, 76, 0.45);
+  outline-offset: 2px;
+}
+
+.donation-form__currency {
+  position: relative;
+}
+
+.donation-form__currency > span {
+  position: absolute;
+  top: 50%;
+  left: 0.95rem;
+  transform: translateY(-50%);
+  color: #555;
+  font-weight: 800;
+}
+
+.donation-form__currency input {
+  padding-left: 2rem;
+}
+
+.donation-form__submit {
+  min-height: 3.3rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #c9a84c;
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.donation-form__submit:hover:not(:disabled) {
+  background: #b8983f;
+}
+
+.donation-form__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.donation-form__error {
+  margin: -0.2rem 0;
+  border-radius: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  background: #fff0ed;
+  color: #9f2d20;
+  font-size: 0.9rem;
+}
+
+.donation-form__note {
+  margin: 0;
+  color: #6b6b6b;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.donation-dialog-open {
+  overflow: hidden;
+}
+
+.donation-notice {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1100;
+  display: grid;
+  gap: 0.2rem;
+  width: min(30rem, calc(100% - 2rem));
+  border-left: 5px solid #c9a84c;
+  border-radius: 0.8rem;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  color: #1a1a1a;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.donation-notice span {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.donation-notice--cancelled {
+  border-left-color: #777;
+}
+
+@media (max-width: 520px) {
+  .donation-form__presets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .donation-dialog__panel,
+  .donation-notice {
+    animation: donation-enter 180ms ease-out;
+  }
+
+  @keyframes donation-enter {
+    from {
+      transform: translateY(0.6rem);
+      opacity: 0;
+    }
+  }
+}
