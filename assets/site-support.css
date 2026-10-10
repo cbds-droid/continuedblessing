@@ -1,0 +1,102 @@
+section[id] {
+  scroll-margin-top: var(--header-offset, 150px);
+}
+
+#mileage-calculator .grid > *,
+#blessing-fund .grid > *,
+#contact .grid > * {
+  min-width: 0;
+}
+
+#contact a[href^="mailto:"] {
+  overflow-wrap: anywhere;
+}
+
+#mileage-calculator input[type="number"] {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (max-width: 639px) {
+  .mileage-inputs {
+    flex-direction: column;
+  }
+
+  #blessing-fund button,
+  #blessing-fund-app button,
+  #contact button {
+    max-width: 100%;
+    height: auto;
+    white-space: normal;
+  }
+
+  .site-footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.site-notice {
+  width: min(32rem, calc(100vw - 2rem));
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #d4c9b8;
+  border-radius: 1rem;
+  background: #faf8f5;
+  color: #1a1a1a;
+  box-shadow: 0 16px 48px #1a1a1a33;
+}
+
+.site-notice::backdrop {
+  background: #1a1a1a99;
+}
+
+.site-notice h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.site-notice p {
+  line-height: 1.6;
+}
+
+.site-notice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.site-notice-actions a {
+  color: #245959;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.site-notice-actions button {
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  background: #c9a84c;
+  color: #1a1a1a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-notice :focus-visible {
+  outline: 3px solid #2c6b6b;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
