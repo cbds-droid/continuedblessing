@@ -1,0 +1,62 @@
+#sacred-grounds { background: #f3efe5; color: #203d35; padding: 100px 24px; border-top: 1px solid #c9a84c80; }
+.sg-wrap { max-width: 1200px; margin: auto; }
+.sg-eyebrow { font-size: .73rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 18px; color: #715a20; }
+.sg-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; padding-bottom: 64px; }
+.sg-intro h2 { font-size: clamp(3.4rem, 7vw, 6.2rem); line-height: .97; margin: 24px 0; }
+.sg-subtitle { font-size: 1.15rem; max-width: 320px; line-height: 1.5; }
+.sg-opening { padding-top: 28px; }
+#sacred-grounds p { line-height: 1.8; }
+.sg-quote { font-family: Georgia, serif; font-size: 1.4rem; line-height: 1.6 !important; margin: 20px 0 28px; }
+.sg-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; padding: 15px 22px; border: 1px solid #203d35; background: #203d35; color: #fff9ed; text-decoration: none; font-weight: 700; border-radius: 4px; transition: background .2s; }
+.sg-button:hover { background: #35594c; }
+.sg-text-link { display: inline-block; margin: 14px 16px 0 0; text-decoration: underline; text-underline-offset: 5px; font-size: .93rem; }
+.sg-opening .sg-text-link { display: block; }
+#sacred-grounds h3 { font-family: Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.2; letter-spacing: -.03em; margin: 0 0 24px; font-weight: 400; }
+#sacred-grounds h4 { font-size: 1.05rem; font-weight: 700; margin: 0 0 10px; }
+.sg-promise { border-top: 1px solid #203d3533; padding-top: 40px; }
+.sg-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 56px; counter-reset: care-step; list-style: none; padding: 12px 0 64px; }
+.sg-steps li { position: relative; padding-left: 54px; counter-increment: care-step; }
+.sg-steps li::before { content: '0' counter(care-step); position: absolute; left: 0; top: -6px; font-family: Georgia, serif; font-size: 1.8rem; color: #927438; }
+.sg-steps p { font-size: .95rem; }
+.sg-pricing { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; border-top: 1px solid #203d3533; padding: 48px 0 64px; align-items: start; }
+.sg-rate-list { margin: 20px 0 32px; }
+.sg-rate-list > div { display: flex; justify-content: space-between; gap: 20px; border-bottom: 1px solid #203d3526; padding: 13px 0; }
+.sg-rate-list dd { font-weight: 700; white-space: nowrap; }
+.sg-membership { background: #203d35; color: #fff9ed; padding: 40px; border-radius: 4px; }
+.sg-membership .sg-eyebrow { color: #dfc57e; }
+.sg-membership-price { font-size: 3rem; font-family: Georgia, serif; margin-bottom: 16px; }
+.sg-membership-price span { font-family: 'Trebuchet MS', sans-serif; font-size: 1rem; }
+.sg-membership ul { list-style: disc; padding-left: 20px; line-height: 2.2; margin-bottom: 28px; }
+.sg-membership .sg-button { background: #dbc487; border-color: #dbc487; color: #203d35; }
+.sg-membership .sg-button:hover { background: #ead7a7; }
+.sg-honor { border-block: 1px solid #b4964a; padding: 36px 0; }
+.sg-honor h3 { margin-bottom: 12px !important; }
+.sg-area { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; padding: 64px 0; }
+.sg-area p + p { margin-top: 20px; }
+.sg-winter { border-left: 3px solid #b4964a; padding-left: 32px; }
+.sg-winter h3 { font-size: 3.5rem !important; margin-bottom: 8px !important; }
+.sg-season { font-weight: 700; }
+footer.sg-contact { background: transparent !important; border-top: 1px solid #203d3533; padding-top: 36px; }
+.sg-contact .sg-quote { max-width: 800px; }
+.sg-contact-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-bottom: 32px; }
+.sg-contact-actions .sg-text-link { margin: 0; overflow-wrap: anywhere; }
+.sg-contact p + p { margin-top: 20px; }
+.sg-tags { font-size: .75rem; color: #566b5c; overflow-wrap: anywhere; }
+@media(max-width: 700px) {
+ #sacred-grounds { padding: 64px 20px; }
+ .sg-intro, .sg-pricing, .sg-area, .sg-steps { grid-template-columns: 1fr; gap: 30px; }
+ .sg-intro { padding-bottom: 40px; }
+ .sg-opening { padding-top: 0; }
+ .sg-intro h2 { font-size: 3.7rem; }
+ .sg-membership { padding: 28px; }
+ .sg-steps { padding-bottom: 40px; }
+ .sg-contact-actions { align-items: flex-start; flex-direction: column; }
+}
+@media print {
+ #sacred-grounds { padding: 0; background: white; }
+ .sg-intro, .sg-pricing, .sg-area { gap: 24px; padding-block: 24px; }
+ .sg-membership, .sg-steps li, .sg-rate-list > div, .sg-winter { break-inside: avoid; }
+ .sg-membership { background: #f3efe5; color: #203d35; padding: 24px; }
+ .sg-tags { display: none; }
+ .sg-button { background: white; color: #203d35; }
+}

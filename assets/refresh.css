@@ -1,0 +1,68 @@
+/* A warm, editorial refresh built around the existing gold identity. */
+:root { --care-ink: #203d35; --care-paper: #f6f2e9; --care-gold: #c9a84c; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+body { font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; color: var(--care-ink); background: var(--care-paper); -webkit-font-smoothing: antialiased; }
+h1, h2 { font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; letter-spacing: -.035em; font-weight: 500 !important; text-wrap: balance; }
+h2 { line-height: 1.16; }
+p { text-wrap: pretty; }
+section { scroll-margin-top: 112px; }
+section[id]:nth-of-type(even) { background-color: var(--care-paper); }
+a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid #2c6b6b; outline-offset: 5px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #2c6b6b; outline-offset: 2px; }
+nav { border-bottom: 1px solid #203d3517; }
+nav img { box-shadow: 0 0 0 1px #c9a84c66; }
+nav a { text-underline-offset: 5px; }
+#home { background: var(--care-ink); }
+#home > div:first-child { min-height: min(780px, 88svh); }
+#home h1 { font-size: clamp(2.6rem, 4.9vw, 4.8rem); line-height: 1.08; }
+#home [code-path="src/sections/Hero.tsx:44:11"] { background: linear-gradient(90deg, #152e28f2 0%, #152e28d9 40%, #152e2833 100%); }
+#home [code-path="src/sections/Hero.tsx:49:11"] { max-width: 760px; }
+#home [code-path="src/sections/Hero.tsx:51:13"] { background: transparent; border: 1px solid #c9a84c99; border-radius: 3px; padding: 10px 15px; }
+#home [code-path="src/sections/Hero.tsx:53:15"] { color: #f1dfac; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
+#home [code-path="src/sections/Hero.tsx:52:15"] { background: #c9a84c; animation: none; }
+#home [code-path="src/sections/Hero.tsx:66:13"] { max-width: 480px; margin-bottom: 22px; }
+#home [code-path="src/sections/Hero.tsx:71:13"] { background: transparent; color: #f1dfac; padding: 0 0 8px; border-radius: 0; box-shadow: none; border-bottom: 1px solid #c9a84c88; }
+#home [code-path="src/sections/Hero.tsx:90:15"] { background: transparent; color: white; border: 1px solid #ffffff80; box-shadow: none; }
+#services [data-slot="card"], #pricing [data-slot="card"] { border: 1px solid #203d351a; box-shadow: 0 6px 24px #203d3509; }
+[data-slot="card"] { border-radius: 12px; }
+#founding-story { border-top: 1px solid #203d351a; }
+#downloads [code-path="src/sections/Downloads.tsx:63:9"] { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 850px; margin-inline: auto; }
+footer { background: var(--care-ink) !important; }
+@media (max-width: 639px) {
+ #home > div:first-child { min-height: 720px; }
+ #home [code-path="src/sections/Hero.tsx:48:9"] { padding-top: 64px; padding-bottom: 64px; }
+ #home [code-path="src/sections/Hero.tsx:44:11"] { background: linear-gradient(90deg, #152e28f2, #152e28b8); }
+ #home h1 { font-size: clamp(2.3rem, 9vw, 3rem); }
+ #home [code-path="src/sections/Hero.tsx:79:13"] { flex-direction: row; flex-wrap: wrap; gap: 12px; }
+ #home [code-path="src/sections/Hero.tsx:80:15"], #home [code-path="src/sections/Hero.tsx:90:15"] { padding-inline: 22px; font-size: 1rem; }
+ #downloads [code-path="src/sections/Downloads.tsx:63:9"] { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+#contact .grid > *, #service-request .grid > * { min-width: 0; }
+#contact input, #contact select, #contact textarea { min-width: 0; max-width: 100%; }
+#contact a[href^="mailto:"] { overflow-wrap: anywhere; }
+@media (max-width: 639px) {
+ #contact [code-path="src/sections/Contact.tsx:129:13"],
+ #contact [code-path="src/sections/Contact.tsx:318:15"] { padding: 24px; }
+}
+
+/* Keep the phone-call process readable with the requested black text. */
+#how-it-works { background-color: var(--care-paper); }
+#how-it-works :is(h2, h3, p, span) { color: #000; }
+#how-it-works [code-path="src/sections/HowItWorks.tsx:84:9"] {
+  background-color: #ebe4d5;
+}
+
+.mileage-estimates { margin-top: 28px; padding-top: 24px; border-top: 1px solid #203d3526; }
+.mileage-estimates h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+.mileage-estimates p { font-size: .85rem; line-height: 1.65; color: #43584e; }
+.mileage-estimates table { width: 100%; border-collapse: collapse; margin-block: 16px; font-size: .85rem; }
+.mileage-estimates th, .mileage-estimates td { padding: 10px 8px; border-bottom: 1px solid #203d3526; text-align: right; }
+.mileage-estimates th:first-child { text-align: left; padding-left: 0; }
+.mileage-estimates thead th { font-size: .75rem; font-weight: 700; }
+.mileage-estimates td { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mileage-estimates .mileage-estimates-note { font-size: .75rem; }
