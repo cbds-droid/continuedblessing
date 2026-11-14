@@ -66,3 +66,6 @@ footer { background: var(--care-ink) !important; }
 .mileage-estimates thead th { font-size: .75rem; font-weight: 700; }
 .mileage-estimates td { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .mileage-estimates .mileage-estimates-note { font-size: .75rem; }
+
+/* Keep Quick Pay amounts readable in every button state. */
+#contact button[code-path="src/components/PayNowButton.tsx:42:5"] { color: #000; }
